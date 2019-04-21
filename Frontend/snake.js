@@ -386,15 +386,15 @@ class AutoSnake extends Snake {
 
     tick(food) {
 
-        if (this.route.length === 0) {
-            this.route = this.findRoute(this.head, food);
-            if (this.route !== undefined) {
-                this.route.unshift(food);
-                this.route.pop();
-            } else {
-                this.route = [];
-            }
+        //        if (this.route.length === 0) {
+        this.route = this.findRoute(this.head, food);
+        if (this.route !== undefined) {
+            this.route.unshift(food);
+            this.route.pop();
+        } else {
+            this.route = [];
         }
+        //      }
 
         if (this.route.length > 0) {
 
